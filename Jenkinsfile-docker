@@ -33,7 +33,7 @@ pipeline {
     stage('Tag Docker Image') {
       agent any
       steps {
-        sh 'docker image tag myweb heosuu/myweb:${env.BUILD_NUMBER}'
+        sh 'docker image tag myweb heosuu/myweb:$BUILD_NUMBER'
         sh 'docker image tag myweb heosuu/myweb:latest'
       }
     }
